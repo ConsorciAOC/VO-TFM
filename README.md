@@ -7,8 +7,7 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 
 ### Informació general
 
-| **Títol:** | Via Oberta – Títol de Família Monoparental. Document d’integració del servei
-|
+| **Títol:** | Via Oberta – Títol de Família Monoparental. Document d’integració del servei|
 | --- | --- |
 | **Creat per:** | Àrea de Tecnologia - Projectes |
 | **A revisar per:** | Àrea de Tecnologia - Suport |
@@ -49,13 +48,12 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 ## 1 Introducció <a name="1"></a>
 Aquest document detalla la missatgeria associada al servei de Títol de Família Monoparental (TFM enendavant).
 
-
-<br/>Per poder realitzar la integració cal conèixer prèviament la següent documentació:
+Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 * Document d’Especificació de missatgeria pel consum de productes de la plataforma PCI del Consorci AOC.
 
 ## 2 Transmissions de dades disponibles <a name="2"></a>
 
-Les dades disponibles a través del servei són les que es presenten a continuació
+Les dades disponibles a través del servei són les que es presenten a continuació:
 
 - **EMISSOR**: Secretaria de Polítiques Familiars i Drets de Ciutadania
 
@@ -96,7 +94,7 @@ La consulta de la vigència d’un títol proporciona informació sobre si el t�
 | /peticioConsultaVigencia/data | Data de comprovació de vigència (DDMMAAAA). L'emissor final no suporta consultes de dates anteriors a l'1 de gener a l'any anterior a l'actual.|
 
 
-#### 3.1.2 Petició – dades específiques <a name="3.1.2"></a>
+#### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a
 continuació.
@@ -105,10 +103,12 @@ continuació.
 <img align="center" src="img/respostaConsultaVigencia.png" />
 </p>
 
-| *Element* | *Descripció*|
+
+| *Element* | *Descripció* |
+| --- | --- |
 | /respostaConsultaVigencia/peticioConsultaVigencia  | Bloc de dades corresponent a la petició que genera la resposta |
-| respostaConsultaVigencia/resposta/indicadorVigencia | Indicador de vigència del títol:  <ul><li>Vigent: <i>Si</i></li><li>No vigent: <i>No</i></li></ul>|
-| /respostaConsultaVigencia/resposta/codiAvis| Si el títol localitzat no és vigent però està en tràmit s’informa aquest element indicant la data de sol·licitud de tramitació del títol. |
+| /respostaConsultaVigencia/resposta/indicadorVigencia | Indicador de vigència del títol:  <ul><li>Vigent: <i>Si</i></li><li>No vigent: <i>No</i></li></ul> |
+| /respostaConsultaVigencia/resposta/codiAvis | Si el títol localitzat no és vigent però està en tràmit s’informa aquest element indicant la data de sol·licitud de tramitació del títol. |
 | /respostaConsultaVigencia/resultat/codiResultat | <ul><li><i>0:</i> Operació realitzada correctament.</li><li><i>1: </i>Error realitzant la consulta.</li><li><i>2: </i>No s’ha trobat títol amb les dades especificades.</li></ul> |
 | /respostaConsultaVigencia/resultat/descripcio| Descripció del resultat |
 
@@ -125,19 +125,21 @@ La consulta de dades d’un títol proporciona informació del títol incloent e
 <img align="center" src="img/peticioDadesCompletes.png" />
 </p>
 
-| *Element* | *Descripció**|
-| /peticioDadesCompletes/identificadorTitular | Identificador del titular en cas de consulta per dades identificatives.|
+| *Element* | *Descripció* |
+| --- | --- |
+| /peticioDadesCompletes/identificadorTitular | Identificador del titular en cas de consulta per dades identificatives. |
 | /peticioDadesCompletes/dadesTitular | dentificador del titular en cas de consulta per cognom i data de naixement. |
-| /peticioDadesCompletes/identificadorTitular/tipusDocumentacio| Tipus de document identificador: <ul><li>DNI</li><li>NIE</li><li>Passaport</li></ul> |
-| /peticioDadesCompletes/identificadorTitular/documentacio| Document identificador. |
-| /peticioDadesCompletes/dadesTitular/primerCognom| Primer cognom (s’obvien majúscules / minúscules i accents) |
-| /peticioDadesCompletes/dadesTitular/dataNaixement| Data de naixement del titular (DDMMAAAA). |
+| /peticioDadesCompletes/identificadorTitular/tipusDocumentacio | Tipus de document identificador: <ul><li>DNI</li><li>NIE</li><li>Passaport</li></ul> |
+| /peticioDadesCompletes/identificadorTitular/documentacio | Document identificador. |
+| /peticioDadesCompletes/dadesTitular/primerCognom | Primer cognom (s’obvien majúscules / minúscules i accents) |
+| /peticioDadesCompletes/dadesTitular/dataNaixement | Data de naixement del titular (DDMMAAAA). |
 
 
 
 #### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
 | *Element* | *Descripció**|
+| --- | --- |
 | /respostaDadesCompletes/peticioDadesCompletes  | Bloc de dades corresponent a la petició que genera la resposta. |
 | /respostaDadesCompletes/resposta | Bloc de dades amb les dades del títol. Vegeu l’apartat [3.2.2.1 per més detalls.](#3.2.2.1) |
 | /respostaDadesCompletes/resultat/codiResultat  | <ul><li><i>0:</i> Operació realitzada correctament.</li><li><i>1: </i>Error realitzant la consulta.</li><li><i>2: </i>No s’ha trobat títol amb les dades especificades.</li></ul> |
@@ -150,10 +152,11 @@ La consulta de dades d’un títol proporciona informació del títol incloent e
 ##### 3.2.2.1 Dades del títol <a name="3.2.2.1"></a>
 
 <p align="center">
-<img align="center" src="img/respostaDadesTitol.png.png" />
+<img align="center" src="img/respostaDadesTitol.png" />
 </p>
 
-| *Element* | *Descripció*|
+| *Element* | *Descripció* |
+| --- | --- |
 | //resposta/numeroTitol  | Número de títol. |
 | //resposta/nom | Nom del titular. |
 | //resposta/primerCognom  | Primer cognom del titular. |
@@ -190,6 +193,7 @@ l’identificador del titular o d’algun dels seus fills
 </p>
 
 | *Element* | *Descripció*|
+| --- | --- |
 | /peticioDadesCompletesDiscapacitats/identificadorTitular/tipusDocumentacio  | Tipus de document identificador: <ul><li>DNI</li><li>NIE</li><li>Passaport</li></ul>|
 | /peticioDadesCompletesDiscapacitats/identificadorTitular/documentacio | Document identificador.|
 
@@ -199,11 +203,12 @@ l’identificador del titular o d’algun dels seus fills
 <img align="center" src="img/respostaDadesCompletesDiscapacitats.png" />
 </p>
 
-| *Element* | *Descripció*|
-| /respostaDadesCompletesDiscapacitats/peticioDadesCompletesDiscapacitats| Bloc de dades corresponent a la petició que genera la resposta. |
+| *Element* | *Descripció* |
+| --- | --- |
+| /respostaDadesCompletesDiscapacitats/peticioDadesCompletesDiscapacitats | Bloc de dades corresponent a la petició que genera la resposta. |
 | /respostaDadesCompletesDiscapacitats/resposta  | Bloc de dades amb les dades del títol. Vegeu l’apartat 3.2.2.1 per més detalls. |
 | /respostaDadesCompletesDiscapacitats/resultat/codiResultat  | <ul><li><i>0:</i> Operació realitzada correctament.</li><li><i>1: </i>Error realitzant la consulta.</li><li><i>2: </i>No s’ha trobat títol amb les dades especificades.</li></ul> |
-| /respostaDadesCompletesDiscapacitats/resultat/descripcio| Descripció del resultat |
+| /respostaDadesCompletesDiscapacitats/resultat/descripcio | Descripció del resultat |
 
 ### 3.4 Consulta de dades d’un títol per lots (*TFM_DADESCOMPLETES_MASSIU*) <a name="3.4"></a>
 
@@ -214,6 +219,7 @@ Consulta de dades de títols per lots a partir de documents identificadors.
 #### 3.4.1 Petició – dades genèriques <a name="3.4.1"></a>
 
 | *Element* | *Descripció*|
+| --- | --- |
 | //Ficheros/Fichero/Contenido | Fitxer amb els identificadors dels titulars dels quals es vol obtenir les dades dels títols (un per línia) fins a un màxim de 500.000 titulars. <br/>Per a la transferència d'aquest fitxer cal seguir l'estàndard MTOM (referència XOP al contingut del fitxer). |
 
 #### 3.4.2 Resposta <a name="3.4.2"></a>
@@ -221,9 +227,10 @@ Consulta de dades de títols per lots a partir de documents identificadors.
 ##### 3.4.2.1 Dades específiques <a name="3.4.2.1"></a>
 
 | *Element* | *Descripció*|
+| --- | --- |
 | /respostaDadesCompletesMassiu/resposta/efectius | Si la petició es processa correctament, número de titulars localitzats pels quals es retornen dades. |
 | /respostaDadesCompletesMassiu/resposta/resultat| Fitxer ZIP amb el resultat codificat en base 64. |
-| /respostaDadesCompletesMassiu/resultat/codiResultat| <ul><li><i>0:</i> Operació realitzada correctament.</li><li><i>1: </i>Error realitzant la consulta.</li><li><i>2: </i>No s’ha trobat títol amb les dades especificades.</li></ul> |
+| /respostaDadesCompletesMassiu/resultat/codiResultat| <ul><li><i>0:</i> Operació realitzada correctament.</li><li><i>1: </i>Error realitzant la consulta.</li></ul> |
 | /respostaDadesCompletesMassiu/resultat/descripcio| Descripció del resultat. |
 
 <p align="center">
@@ -258,9 +265,10 @@ Consulta de dades de títols i número de discapacitats per lots a partir de doc
 
 <br/>Per cada identificador retorna un fitxer amb les dades del títol corresponent al titular del tram de vigència més recent.
 
-#### 3.5.1 Resposta <a name="3.5.1"></a>
+#### 3.5.1 Petició – dades genèriques <a name="3.5.1"></a>
 
 | *Element* | *Descripció*|
+| --- | --- |
 | //Ficheros/Fichero/Contenido | Fitxer amb els identificadors dels titulars dels quals es vol obtenir les dades dels títols (un per línia) fins a un màxim de 500.000 titulars. <br/> Per a la transferència d'aquest fitxer cal seguir l'estàndard MTOM (referència XOP al contingut del fitxer). |
 
 #### 3.5.2 Resposta <a name="3.5.2"></a>
@@ -280,6 +288,7 @@ Consulta de dades de títols i número de discapacitats per lots a partir de doc
 El fitxer de dades amb els titulars processats contindrà les respostes separades per un salt de línia amb el següent format:
 
 | *Descripció* | *Longitud*|
+| --- | --- |
 | Número de títol  | 25 |
 | Identificador del titular  | 15 |
 | Nom del titular | 20 |
