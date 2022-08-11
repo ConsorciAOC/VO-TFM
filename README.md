@@ -3,11 +3,6 @@ Document d’integració del servei
 
 Podreu trobar els XSD's del servei en aquest repositori sota el directori [/schema](https://github.com/ConsorciAOC/VO-TFN_CCAA/tree/main/TFN-CCAA-schema).
 
-## Control del document
-
-### Informació general
-
-| **Títol:** | Via Oberta – Títol de Família Monoparental. Document d’integració del servei|
 
 ### Històric de revisions
 
