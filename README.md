@@ -8,12 +8,6 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 ### Informació general
 
 | **Títol:** | Via Oberta – Títol de Família Monoparental. Document d’integració del servei|
-| --- | --- |
-| **Creat per:** | Àrea de Tecnologia - Projectes |
-| **A revisar per:** | Àrea de Tecnologia - Suport |
-| **A aprovar per:** | Àrea de Tecnologia - Suport|
-| **Llista de distribució:** | |
-| **Nom del document:** | DI - Via Oberta - TFM.doc |
 
 ### Històric de revisions
 
@@ -49,7 +43,11 @@ Podreu trobar els XSD's del servei en aquest repositori sota el directori [/sche
 Aquest document detalla la missatgeria associada al servei de Títol de Família Monoparental (TFM enendavant).
 
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
-* Document d’Especificació de missatgeria pel consum de productes de la plataforma PCI del Consorci AOC.
+
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/PCI
+
 
 ## 2 Transmissions de dades disponibles <a name="2"></a>
 
@@ -311,7 +309,13 @@ El tipus de persona T indica que el membre identificat en el fitxer d'entrada pe
 
 ## 4 Joc de proves <a name="4"></a>
 
-Degut a que l'emissor final no proporciona un joc de proves estable us recomanem que ens el sol·liciteu en el moment de fer la integració.
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
+
 
 
 
